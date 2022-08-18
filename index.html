@@ -9,6 +9,10 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- SCRIPT -->
+
+    
+
 
 
 <!--Google FONTS-->
@@ -20,6 +24,8 @@
 </head>
 
 <body>
+<!--Funciona-->
+    
 
 <div class="Contenedor"> 
     
@@ -36,6 +42,7 @@
 <h3> Quieres registrarte?</h3>
 <p> <a href="C"> Registrate</a> para poder acceder al sitio</p>
 
+<!-- Alinear-->
 
 </form> 
 
@@ -43,25 +50,28 @@
 
 
 </div>
-<!--Inicio del Loign-->
+
 
 
 <div class="Login-box">
 </form> 
  
-
+<!--Inicio del Loign-->
     
 
-<form align="center" action="" class="Formulario_Inicio"> 
+<form align="center" action="" id="form"> 
     
 
     <h2 class="h2"> Iniciar Sesion</h2>
     
-<input class="Correo" type="text" placeholder="correo electronico">
+<input  id="correo" class="Correo" type="text" placeholder="correo electronico">
 
-<input  class="contraseña" type="password" placeholder="Contraseña">
+<input  id="password" class="contraseña" type="password" placeholder="Contraseña">
 
-<button class="button">Acceder!</button>
+<!-- Boton malo-->
+
+<button onclick="Validacion()" id="buttoni" class="button">   Entrar   </button> 
+
 
 <a class="button2" href="https://www.google.com/">Olvido su contraseña?
 
@@ -71,9 +81,12 @@
 
 
 </form>
-</div>
 
 <!--FIn del Login-->
+
+</div>
+
+
 
 
 
@@ -105,7 +118,7 @@
 <p> Clickea <a href="B"> aqui</a>  para descargar la letra del obligatorio</p>
 
 
-
+<script src="login.js"> </script>
 
     
 </body>
