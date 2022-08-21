@@ -4,10 +4,16 @@ fetch (url)
 .then (response => response .json())
 .then (data => {
 
-    let probando = document.getElementById('probando')
-    probando.innerHTML= `
+    let element = document.getElementById('elem')
+    element.innerHTML= `
+    <p> ${data.id}
     <p>${data.name}</p> 
-    <p>${data.order}
+    <p>${data.description}</p> 
+    <p> ${data.currency}</p>
+    <p> ${data.soldCount}</p>
+    <img src='${data.image}'/>
+
+    
     `; 
 
     
