@@ -68,3 +68,17 @@ buttoni.addEventListener ( 'click' , (e) => {
 	
 	
 });
+
+
+
+
+
+// Local storage Login//
+
+
+const Logear = document.getElementById("LocalS");
+
+
+
+
+
