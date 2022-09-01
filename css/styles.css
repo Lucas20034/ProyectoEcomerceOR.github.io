@@ -188,3 +188,13 @@ a.custom-card:hover {
 .checked {
   color: orange;
 }
+
+
+.nav-link{
+
+  background-color: black;
+  border: #0087F7;
+  border-radius: 15px;
+  overflow: hidden;
+  
+  }

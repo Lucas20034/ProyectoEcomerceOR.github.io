@@ -21,26 +21,28 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav w-100 justify-content-between">
           <li class="nav-item">
-            <a class="nav-link active" href="index.html">Inicio</a>
+            <a class="nav-link active" href="login.html">Inicio</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="categories.html">Categorías</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="sell.html">Vender</a>
-
-          <li id="LocalS" >  . </li>
-
           </li>
           <li class="nav-item">
           </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="index.html" id="login">Iniciar Sesion </a> <!--boton de inicio de sesio desde el inicio-->
+          </li>
+          <li class="nav-item">
+            <button class="nav-link" href="index.html" id="CerrarSesion" onclick="limpiarItems()">Cerrar Sesión</button> <!--boton de inicio de sesio desde el inicio-->
+          </li>
+
         </ul>
       </div>
     </div>
   </nav>
-
-
-
   <main>
     <div class="jumbotron text-center"></div>
     <div class="album py-5 bg-light">
@@ -52,7 +54,7 @@
                 alt="Imgagen representativa de la categoría 'Autos'">
               <h3 class="m-3">Autos</h3>
               <div class="card-body">
-                <p class="card-text">Los mejores precios en autos 0 kilómetro, de alta y media gama.</p>
+                <p class="card-text" id="limpiar"  >Los mejores precios en autos 0 kilómetro, de alta y media gama.</p>
               </div>
             </div>
           </div>

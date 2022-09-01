@@ -1,4 +1,4 @@
-const URL = "https://japceibal.github.io/emercado-api/cats_products/101.json";
+URL = "https://japceibal.github.io/emercado-api/cats_products/101.json";
 
 
 //funcion que cargará los datos obtenidos:
@@ -29,7 +29,6 @@ function showinfo(array){
                                     </div>
                                 </div>  
                             </div> 
-
                             ` 
          document.getElementById("info").innerHTML += elementHTML;
     });
@@ -162,4 +161,3 @@ document.addEventListener("DOMContentLoaded", function(e){
         showCategoriesList();
     });
 });
-
