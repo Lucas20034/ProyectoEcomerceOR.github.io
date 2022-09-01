@@ -76,7 +76,7 @@ console.log(usu, pass);
         localStorage.usuario = usu
        
     } else{
-        alert("usuario o contraseña incorrecta");
+        alert("Usuario no registrado , prueba  con :Usuario Lucas Cardozo , password 1234");
     }
 
 }
