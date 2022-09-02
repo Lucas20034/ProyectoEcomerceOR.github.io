@@ -198,3 +198,10 @@ a.custom-card:hover {
   overflow: hidden;
   
   }
+
+/* Para el buscador */
+  .bi {
+
+
+    border-radius: 15px;
+  }
