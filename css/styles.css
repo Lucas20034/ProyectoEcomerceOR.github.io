@@ -202,6 +202,22 @@ a.custom-card:hover {
 /* Para el buscador */
   .bi {
 
-
+position: relative;
+top: 200px;
+right: -300px;
     border-radius: 15px;
+    width: 300px;
+
+  }
+
+  .Patron {
+position: relative;
+top: 190px ;
+
+  }
+
+  .Master{
+
+position: relative;
+top: -270px;
   }

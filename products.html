@@ -41,13 +41,14 @@
   </nav>
 
 <!--Cierre del Nav-->
+<h2 id="catName" > </h2>
 <div class="text-center p-4">
-  <h2>Listado</h2>
+  
    <div class=" list-group" id="cat-list-container"> 
    </div>
 <div> 
   <!-- El Searching-->
-   <input type="search" placeholder="Buscador"  class="bi bi-search" > </input> 
+   <input id="searchBar" type="search" placeholder=" 🔍  Buscador"  class="bi bi-search" > </input> 
   </div>
 
 </div>
@@ -56,43 +57,45 @@
 
 <!-- S#@#-->
 
-<main class="pb-5 container">
 
-  <!--Aqui empieza la entrega 1-->
-  <div class="text-center p-4">
-    <h2>Productos</h2>
-    <p class="lead">Verás aquí todos los productos de la categoría <b>auto</b>.</p>
-  </div>
-    <div class="row">
-      <div class="list-group" id="cat-list-container">
-      </div>
-    </div>
-  </div>
-    <div class="container">
-      <div>
-        <p id="info"></p>
-      </div>
-    </div> 
-    <!--Aqui termina la entrega 1--> 
-</main>
 
 
 
 <!--S@#-->
 
+<br> </br>
+<br> </br>
+<br> </br>
+
+  
   <div class="container">
     <div class="row">
       <div class="col text-end">
         <div class="btn-group btn-group-toggle mb-4" data-bs-toggle="buttons">
-          <input type="radio" class="btn-check" name="options" id="sortAsc">
-          <label class="btn btn-light" for="sortAsc"><i class="fas fa-sort-amount-down mr-1"></i>$</label>
-          <input type="radio" class="btn-check" name="options" id="sortDesc">
-          <label class="btn btn-light" for="sortDesc"><i class="fas fa-sort-amount-up mr-1"></i>$</label>
+
+          <!--Coso SOrt ASC IMPUT COMB LABEL1-->
+          <input type="radio" class="btn-check" name="options" id="sortAsc"  onclick="productSortMore()">
+
+          <label class="btn btn-light" for="sortAsc" ><i class="fas fa-sort-amount-down mr-1"> </i>  $  A</label>
+          
+          <!--Coso Cierre SOrt ASC IMPUT COMB LABEL1-->
+          
+          <!--Coso Abierrto 2-->
+
+          <input type="radio" class="btn-check" name="options" id="sortDesc"    onclick="productSortLess()" >
+          <label class="btn btn-light" for="sortDesc"  > <i class="fas fa-sort-amount-up mr-1" > </i>  $D</label>
+          
+          <!--Coso Cierre Abierrto 2-->
+
           <input type="radio" class="btn-check" name="options" id="sortByCount" checked>
+
           <label class="btn btn-light" for="sortByCount"><i class="fas fa-sort-amount-down mr-1"></i></label>
+
         </div>
+
       </div>
     </div>
+
     <div class="row">
       <div class="col-lg-6 offset-lg-6 col-md-12 mb-1 container">
         <div class="row container p-0 m-0">
@@ -100,29 +103,57 @@
             <p class="font-weight-normal text-end my-2">Cant.</p>
           </div>
           <div class="col">
-            <input class="form-control" type="number" placeholder="min." id="rangeFilterCountMin">
+            <input class="form-control" type="number" placeholder="min." id="CountMin">
           </div>
           <div class="col">
-            <input class="form-control" type="number" placeholder="máx." id="rangeFilterCountMax">
+            <input class="form-control" type="number" placeholder="máx." id="CountMax">
           </div>
           <div class="col-3 p-0">
             <div class="btn-group" role="group">
-              <button class="btn btn-light btn-block" id="rangeFilterCount">Filtrar</button>
+              <button class="btn btn-light btn-block" id="rangeFilterCount" >Filtrar</button>
               <button class="btn btn-link btn-sm" id="clearRangeFilter">Limpiar</button>
             </div>
           </div>
         </div>
       </div>
     </div>
-
-
     <div class="row">
       <div class="list-group" id="cat-list-container">
+        
+
       </div>
     </div>
   </div>
+</main>
+ 
 
 
+  <p id="catID"> </p>
+
+    <!--Aqui empieza la entrega 1-->
+    <div class="Master"> 
+    <div class="text-center p-4">
+      <h2>Productos</h2>
+      <p class="lead">Verás aquí todos los productos de la categoría <b>auto</b>.</p>
+    </div>
+      <div class="row">
+        <div class="list-group" id="cat-list-container">
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+      <div class="container">
+        <div>
+         
+          
+          <p id="info"></p>
+        </div>
+      </div> 
+      <!--Aqui termina la entrega 1--> 
+  </main>
 
 
 
@@ -188,7 +219,8 @@
 
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/init.js"></script>
-  <script src="products.js" type="module"></script>
+  <script  type="text/javascript" src="products.js" type="module" ></script>
+ 
 
 
 <!--End Scripts-->
