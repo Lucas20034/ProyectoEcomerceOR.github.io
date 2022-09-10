@@ -4,7 +4,7 @@ fetch( PRODUCT_INFO_URL +  localStorage.getItem("ProDucts") + '.json')
 .then( respuesta => respuesta.json() )
 .then( data => {
     const ArrayDatos = data;
-    ShowProduct(ArrayDatos.relatedProducts);
+    ShowProduct(ArrayDatos.images);
 } )
 
 function ShowProduct(array) {
