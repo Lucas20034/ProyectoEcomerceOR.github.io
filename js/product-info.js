@@ -100,7 +100,8 @@ getJSONData(PRODUCT_INFO_COMMENTS_URL+ idinfo + EXT_TYPE).then(function(resultOb
         cuack = resultObj.data
         
         showProductComments(cuack)
-        
+        addcoment()
+
         console.log(cuack)
     }
 });
@@ -137,3 +138,29 @@ function showProductComments(comments){
 
 
 
+       function addcoment(){
+        let parrfo =document.getElementById("comentar")
+        parrfo.innerHTML=`
+        <h1 class="my-3">Agregar Comentario</h1>
+            <hr class="my-4">
+            <div class="row mt-4 g-3">
+                <div class="col-sm-4">
+                <label for="Item" class="form-label">
+                    start:
+                    <select name="estrellas" id="">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select> 
+                </label>
+                <input type="text" class="form-control" id="item">
+                <div class="d-grid">
+                    <button type="button" class="btn btn-primary my-3" id="agregar">Agregar</button>
+                </div>
+                </div>
+             </div>
+             `
+
+    }
