@@ -1,105 +1,34 @@
-// delcaro las variables //
-
-var Formulario = document.getElementById('form');
-
-var correo  = document.getElementById('correo');
-
-var  password = document.getElementById('password');
-
-const buttoni = document.getElementById('buttoni');
+const  nombre  = document.getElementById("correo");
+const  pass    = document.getElementById("password");
+const  form    = document.getElementById("form");
+const  parrafo = document.getElementById("warnings");
+window.localStorage.clear();
 
 
-
-
-
-
-//function// 
-
-
-
-
-//login//
-
-
-
-
-function Validacion(){
-
-if(correo.value !='' && password.value !='' ){
-
-	
-
-	
-alert("A ingresado correctamente los datos  ")
-, document.location.href="login.html"
-; 
-
-
-} 
-
-
-else { alert('Datos incorrectos') 
-
-
-
-
-
-
-
-}
-}
-//other//
-function login(){
-    if(nombre.value == "Iniciar Sesion" && contraseña.value == null){
-       
-        window.location = "login.html";
-       
-    } else{
-        alert("usuario o contraseña incorrecta");
-    }
-
-}
-//other//
-
-// Enter//
-function entrar()
-
-{
+form.addEventListener("submit",function (event) {
     
-const usu = document.getElementById('correo').value;
-const pass = document.getElementById('password').value;
-console.log(usu, pass);
+    event.preventDefault();
+    let warnings="";
+    parrafo.innerHTML="";
+    let entrar= false;
 
-    if(usu == "Lucas Cardozo" && pass == "1234"){
-       
-        alert("Bienvenido Lucas Cardozo");
-        window.location = "login.html";
-        localStorage.usuario = usu
-       
-    } else{
-        alert("Usuario no registrado , prueba  con :Usuario Lucas Cardozo , password 1234");
+    if (nombre.value == null || nombre.value == "") {
+        warnings += `Debe ingresar el usuario <br>`;
+        entrar=true;
+    }
+    if (pass.value== null || pass.value=="") {
+            warnings += `Debe ingresar la contraseÃ±a <br>`;
+            entrar=true;
     }
 
-}
-
-//enter//
-
-
-
-buttoni.addEventListener ( 'click' , (e) => {
-
-
-
-	e.preventDefault()
-	const data = {
-		correo: correo.value,
-		password: password.value
-
-	}
-
-
-	
-	
+    if(entrar){
+        parrafo.innerHTML=warnings;
+    }else{
+        
+        localStorage.setItem('usuario',(nombre.value));
+        window.location.href="login.html"
+    
+    }
 });
 
 
