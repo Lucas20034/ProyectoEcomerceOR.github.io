@@ -1,13 +1,13 @@
+//Relizar array y tomar una funcion//
 
 
-//fetch 1  la que se encarga de traerme  las descripciones de el producto especifico //
 let MotherRray = [];
 
 
 
 let idinfo = localStorage.getItem('ProDucts');
 
-
+//fetch 1  la que se encarga de traerme  las descripciones de el producto especifico //
 function inicio(array) {
 
     let Descriptions = "";
@@ -41,7 +41,7 @@ function inicio(array) {
 }
 
 
-//Fetch 2 ((PETICION DE LAS RECOMENDACIONES )) ///
+//Fetch 2 ((PETICION DE LAS RECOMENDACIONES )) recicle un codigo que ya hice para products.js ///
 
 fetch(PRODUCT_INFO_URL + localStorage.getItem("ProDucts") + EXT_TYPE)
     .then(respuesta => respuesta.json())
