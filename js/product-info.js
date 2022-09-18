@@ -54,7 +54,7 @@ function ShowProduct(array) {
 
     array.forEach(propent => {
         var ProductHTML = ` 
-        <div onclick="setCatID(${propent.id})" class="list-group-item list-group-item-action cursor-active">
+        <div onclick="MasterClick(${propent.id})" class="list-group-item list-group-item-action cursor-active">
         <div class="row">
             <div class="col-3">
                 <img src="${propent.image}" alt="${propent.name}" class="img-thumbnail" style=" height:10em;">
@@ -97,12 +97,12 @@ document.addEventListener("DOMContentLoaded", function(){
 
 getJSONData(PRODUCT_INFO_COMMENTS_URL+ idinfo + EXT_TYPE).then(function(resultObj){
     if (resultObj.status === "ok"){
-        cuack = resultObj.data
+        Rise = resultObj.data
         
-        showProductComments(cuack)
+        showProductComments(Rise)
         addcoment()
 
-        console.log(cuack)
+        console.log(Rise)
     }
 });
 
@@ -139,8 +139,8 @@ function showProductComments(comments){
 
 
        function addcoment(){
-        let parrfo =document.getElementById("comentar")
-        parrfo.innerHTML=`
+        let Missfortune =document.getElementById("comentar")
+        Missfortune.innerHTML=`
         <h1 class="my-3">Agregar Comentario</h1>
             <hr class="my-4">
             <div class="row mt-4 g-3">

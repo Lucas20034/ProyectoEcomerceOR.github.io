@@ -45,10 +45,7 @@ function productSortLess() {
     }
 //Para el onclick//
   
-function MasterClick(id) {
-    localStorage.setItem("ProDucts", id);
-    window.location = "product-info.html"
-}
+
 
 function showProducts(list){
     let htmlContentToAppend = "";
