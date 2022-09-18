@@ -17,7 +17,7 @@ form.addEventListener("submit",function (event) {
         entrar=true;
     }
     if (pass.value== null || pass.value=="") {
-            warnings += `Debe ingresar la contraseÃ±a <br>`;
+            warnings += `Debe ingresar la password<br>`;
             entrar=true;
     }
 

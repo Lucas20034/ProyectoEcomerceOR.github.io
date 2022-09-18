@@ -57,7 +57,7 @@ function ShowProduct(array) {
         <div onclick="MasterClick(${propent.id})" class="list-group-item list-group-item-action cursor-active">
         <div class="row">
             <div class="col-3">
-                <img src="${propent.image}" alt="${propent.name}" class="img-thumbnail" style=" height:10em;">
+                <img src="${propent.image}" alt="${propent.name}" class="img-thumbnail" style=" height:10em; border-radius: 60px; border-style: solid; border-width: 5px; border-color: #c5c5c556; ">
             </div>
             <div class="col">
                 <div class="d-flex w-100 justify-content-between">

@@ -93,6 +93,8 @@ margin-top: 100px;
     background-color: rgba(255, 0, 0, 0.075);
     color: yellow;
     cursor: pointer;
+
+    left: -1em;
     
 }
 
@@ -113,6 +115,7 @@ margin-top: 100px;
 top: 0;
 top: 120px;
 right: 50px;
+right: -0.1em;
 
 
 color: rgb(22, 90, 190);
