@@ -2,6 +2,8 @@ const  nombre  = document.getElementById("correo");
 const  pass    = document.getElementById("password");
 const  form    = document.getElementById("form");
 const  parrafo = document.getElementById("warnings");
+
+
 window.localStorage.clear();
 
 
@@ -24,9 +26,15 @@ form.addEventListener("submit",function (event) {
     if(entrar){
         parrafo.innerHTML=warnings;
     }else{
+
         
         localStorage.setItem('usuario',(nombre.value));
+        
+
+
         window.location.href="login.html"
+
+      
     
     }
 });

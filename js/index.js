@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
 const limpiar = document.getElementById ("")
  
-document.getElementById('login').innerHTML = localStorage.usuario
+document.getElementById('login2').innerHTML = localStorage.usuario
 
 limpiar.addEventListener("click", () => {
     limpiarItems();
