@@ -223,5 +223,21 @@ top: -270px;
   }
 
 
- 
+ .Nombre{ 
+  position: relative;
+ right: -25em;
+ }
+
+
+ .Cantidad{
+  position: relative;
+  right: -12em;
+ }
+
+ .Precio{
+
+position: relative;
+right: 5em;
+
+ }
  
