@@ -46,16 +46,18 @@ function ShowProduct(array) {
     `
 
         document.getElementById("lasterfest").innerHTML += ProductHTML;
+
+
+        const input = document.querySelector("input");
+
+	//Agrego el evento dentro del input para que cuando sea modificado tambien se modifique el campo del subtotal.
+	input.addEventListener("input", () => {
+		document.querySelector(".tdSubTotal").innerHTML = `${propent.currency} ${Number(input.value) * propent.unitCost}`;
+        
+	});
+
     });
 
 }
 
 
-
-
-const input = document.querySelector("input");
-
-	//Agrego el evento dentro del input para que cuando sea modificado tambien se modifique el campo del subtotal.
-	input.addEventListener("input", () => {
-		document.querySelector(".tdSubTotal").innerHTML = `${propent.currency} ${Number(input.value) * propent.unitCost}`;
-	});
