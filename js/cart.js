@@ -29,10 +29,11 @@ function ShowProduct(array) {
 
                     <h2 class="mb-1"> <p> Costo <hr> </hr>  <p>  ${propent.unitCost} </h2>
 
-                     <h3 class="mb-1"> <p> Cantidad <hr> </hr> <p>  <input type="number" style=" height:3em;  width:3em;">  </h3>
+                     <h3 class="mb-1"> <p> Cantidad <hr> </hr> <p>  <input id="ValorA" type="number" style=" height:3em;  width:3em;">  </h3>
 
 
-                    <h4 class="mb-1"> <p> Subtotal <hr> </hr>  <p> ${propent.unitCost} ${propent.currency}</h4>
+                    <h4 <td class="tdSubTotal col-2"> ${propent.currency} ${propent.unitCost}</td> </h4>
+
                     <hr> </hr>  
                     
                 </div>
@@ -49,12 +50,12 @@ function ShowProduct(array) {
 
 }
 
-const Cifra= 15200
 
-function Calculator()  {
-//Count//
-Cifra *  unitCost.value
-console.log(Calculator)
 
-}
-Calculator()
+
+const input = document.querySelector("input");
+
+	//Agrego el evento dentro del input para que cuando sea modificado tambien se modifique el campo del subtotal.
+	input.addEventListener("input", () => {
+		document.querySelector(".tdSubTotal").innerHTML = `${propent.currency} ${Number(input.value) * propent.unitCost}`;
+	});
