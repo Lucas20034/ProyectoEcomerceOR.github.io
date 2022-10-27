@@ -253,4 +253,29 @@ right: 18em;}
   left: 25em;
  
 }
+
+
+.BuyButton{
+position: absolute;
+margin: flex;
+}
  
+
+.UPE{
+  position: relative;
+  top: -25em;
+}
+
+
+.UPE2{
+  position: relative;
+  top: -25em;
+}
+
+
+.Movingbutton{
+position: relative;
+right: -52em;
+
+
+}

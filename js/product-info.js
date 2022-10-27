@@ -164,3 +164,9 @@ function showProductComments(comments){
              `
 
     }
+
+
+    function Romeo(id) {
+        localStorage.setItem("Socrates", id);
+        window.location = "cart.html"
+      }
