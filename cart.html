@@ -45,25 +45,30 @@
 
   <p id="lasterfest"> </p>
   <br> </br>
-  <hr> </hr>
-  <hr class="mb-4">
-  <h5 class="mb-3" style="font-size: 2em;">Tipo de envio</h5>
-  <div class="d-block my-3">
-    <div class="custom-control custom-radio">
-      <input id="goldradio" name="publicationType" type="radio" class="custom-control-input" checked=""
-        required="">
-      <label class="custom-control-label" for="goldradio">Premium 2 a 5 dias(15%)</label>
-    </div>
-    <div class="custom-control custom-radio">
-      <input id="premiumradio" name="publicationType" type="radio" class="custom-control-input" required="">
-      <label class="custom-control-label" for="premiumradio">Express 5 a 6 dias (7%) </label>
-    </div>
-    <div class="custom-control custom-radio">
-      <input id="standardradio" name="publicationType" type="radio" class="custom-control-input" required="">
-      <label class="custom-control-label" for="standardradio">Standard 12 a 15 dias(5%))</label>
+  
+    <br> </br>
+
+
+    <hr class="mb-4">
+    <h5 class="mb-3">Tipo de publicación</h5>
+    <div class="d-block my-3">
+      <div class="custom-control custom-radio">
+        <input id="goldradio" name="publicationType" type="radio" class="custom-control-input" checked=""
+          required="">
+        <label class="custom-control-label" for="goldradio">Gold (13%)</label>
+      </div>
+      <div class="custom-control custom-radio">
+        <input id="premiumradio" name="publicationType" type="radio" class="custom-control-input" required="">
+        <label class="custom-control-label" for="premiumradio">Premium (7%)</label>
+      </div>
+      <div class="custom-control custom-radio">
+        <input id="standardradio" name="publicationType" type="radio" class="custom-control-input" required="">
+        <label class="custom-control-label" for="standardradio">Estándar (3%)</label>
+      </div>
       
     </div>
-    <br> </br>
+    <hr class="mb-4">
+    
     
     <div class="container">
       <main>
@@ -92,7 +97,7 @@
                 <label for="email" class="form-label">Esquina</label>
                 <input type="email" class="form-control" id="email">
                 <div class="invalid-feedback">
-                 Porfavor ingrese una esquina 
+                 Porfavor ingrese una esquina VALIDA
                 </div>
               </div>
   
@@ -102,6 +107,8 @@
         </form>
 
       </main>
+
+      
 
       
       <div class="modal fade" id="modalTerminos" tabindex="-1" aria-hidden="true">
@@ -168,11 +175,10 @@
     <hr> </hr>
     <div align="center">
     <div class="col-sm-12">
-      <button type="button" class="btn btn-link ps-0" data-bs-toggle="modal"
-        data-bs-target="#modalTerminos" id="btnCheck"> Seleccionar </button>
-        
-    
-</div>
+      <div class="row">
+        <button type="button" class="m-1 btn btn-link" data-bs-toggle="modal"
+          data-bs-target="#contidionsModal">Seleccionar</button>
+      </div>
 </div>
   <hr class="mb-4">
 
@@ -185,6 +191,7 @@
 </div>
   <!--Costos-->
 
+  
 
     </main>
     <footer class="text-muted">
@@ -198,6 +205,56 @@
       </div>
       
     </footer>
+    <div id="spinner-wrapper">
+      <div class="lds-ring">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+
+
+    <div class="modal fade" tabindex="-1" role="dialog" id="contidionsModal">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Formas de pago disponibles</h5>
+          </div>
+          <div class="modal-body">
+            <div class="container">
+
+              <div class="row">
+                <input type="checkbox" class="form-check-input" id="terminos" required>
+                <h5 class="text-warning">Con tarjeta de Credito</h5>
+                <p class="muted text-justify">Toda informacion proporcionada estan sujetas  a varias barras de cogios protejidos por Lucas.</p>
+              </div>
+            </input>
+            <p> CVV</p>
+            <input type="password"> </input>
+            <p>Number</p>
+            <input type="password"> </input>
+            <p>Caduce en </p>
+            <input type="date"> </input>
+
+              <hr>
+              <div class="row">
+                <input type="checkbox" class="form-check-input" id="terminos" required>
+                <h5 class="text-primary">Transferencia Bancaria</h5>
+                <p> Numero de cuenta </p>
+            <input type="password"> </input>
+
+                <p class="muted text-justify">Toda informacion proporcionada estan sujetas  a varias barras de cogios protejidos por Lucas.</p>
+              </div>
+              
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <div id="spinner-wrapper">
       <div class="lds-ring">
         <div></div>

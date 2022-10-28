@@ -29,7 +29,7 @@ function ShowProduct(array) {
 
                     <h2 class="mb-1"> <p> Costo <hr> </hr>  <p>  ${propent.unitCost} </h2>
 
-                     <h3 class="mb-1"> <p> Cantidad <hr> </hr> <p>  <input id="ValorA" type="number" style=" height:3em;  width:3em;">  </h3>
+                     <h3 class="mb-1"> <p> Cantidad <hr> </hr> <p>  <input id="ValorA" type="number" min="1"style=" height:3em;  width:3em;">  </h3>
 
 
                     <h4 <td class="tdSubTotal col-2"> ${propent.currency} ${propent.unitCost}</td> </h4>
