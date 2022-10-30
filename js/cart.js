@@ -1,226 +1,97 @@
-const PAPEL = ('https://japceibal.github.io/emercado-api/user_cart/25801.json') // Llamo a la API que necesito// 
+const PAPEL = ('https://japceibal.github.io/emercado-api/user_cart/25801.json') 
+let idinfo = localStorage.getItem('catID2');
+let l15= document.getElementById("goldradio")
+        let l7= document.getElementById("premiumradio")
+        let l5= document.getElementById("standardradio")
+        let porcentaje= 0;
+ document.addEventListener("DOMContentLoaded", function(){
 
-//peticion feth 
-
-
-fetch(PAPEL )
-.then(response => response.json())
-.then(data => {
-    const ArrayDatos = data;
-    ShowProduct(ArrayDatos.articles);
-     console.log(PAPEL)
+    fetch(PAPEL)
+    .then(response => response.json())
+    .then(data => {
+        const ArrayDatos = data;
+        prueba(ArrayDatos.articles)
+        
+         console.log(ArrayDatos.articles)
+    });
+     
+ fetch(PRODUCT_INFO_URL+idinfo + EXT_TYPE)
+ .then(response => response.json())
+ .then(data => {
+     const lll = data;
+      console.log(lll)
+ })
 })
 
+ 
 
-function ShowProduct(array) {
+function prueba(array) {
 
     array.forEach(propent => {
         var ProductHTML = ` 
        
+        <div class="container">
         <div class="row">
+          <div class="col-sm">
+          <img src="${propent.image}"  class="img-thumbnail" >
+          </div>
+          <div class="col-sm">
+          <h3 text-center> ${propent.name}</h3>
+          </div>
+          <div class="col-sm">
+          <h2 class="mb-1"> ${propent.unitCost} </h2>
 
-            <div class="col-3">
-                <img src="${propent.image}"  class="img-thumbnail" style=" height:10em; border-radius: 60px; border-style: solid; border-width: 5px; border-color: #c5c5c556; ">
-            </div>
-            
-            <div class="col">
-               <div class="d-flex w-100 justify-content-between"> 
-                    <h2 class="mb-1">   <p> Nombre <hr> </hr> <p>${propent.name}</h2>
-
-                    <h2 class="mb-1"> <p> Costo <hr> </hr>  <p>  ${propent.unitCost} </h2>
-
-                     <h3 class="mb-1"> <p> Cantidad <hr> </hr> <p>  <input id="ValorA" type="number" min="1"style=" height:3em;  width:3em;">  </h3>
-
-
-                    <h4 <td class="tdSubTotal col-2"> ${propent.currency} ${propent.unitCost}</td> </h4>
-
-                    <hr> </hr>  
-                    
-                </div>
-                
-            </div>
-            
+          </div>
+          <div class="col-sm">
+          <h3 class="mb-1"><input id="${propent.id}" type="number" min="1"  style=" width:3em;">  </h3>
+          
         </div>
-        
-    </div>
+        <div class="col-sm">
+        <h4 <td class="SubTotal col-2"> ${propent.currency} ${propent.unitCost}</td> </h4>
+      </div>
+        </div>
+      </div>
     `
 
         document.getElementById("lasterfest").innerHTML += ProductHTML;
-
-
-        const input = document.querySelector("input");
-
-	// me permite la multiplicacion 
-	input.addEventListener("input", () => {
-		document.querySelector(".tdSubTotal").innerHTML = `${propent.currency} ${Number(input.value) * propent.unitCost}`;
+const input = document.getElementById(propent.id);
         
-	});
+// me permite la multiplicacion sell
+input.addEventListener("input", () => {
+  document.querySelector(".SubTotal").innerHTML = `${propent.currency} ${Number(input.value) * propent.unitCost}`;
+document.getElementById("productCostText").innerHTML = `${propent.currency} ${Number(input.value) * propent.unitCost}`  
+document.getElementById("totalCostText").innerHTML = `${propent.currency} ${((Number(input.value) * propent.unitCost )*porsentaje)}`
+
+l15.addEventListener("click",()=>{
+  porcentaje=0.15
+  pan=15
+  document.getElementById("comissionText").innerHTML = `${propent.currency} ${(Number(input.value) * propent.unitCost )*porcentaje}`
+  
+})
+l7.addEventListener("click",()=>{
+  porcentaje= 0.07
+  pan=7
+  document.getElementById("comissionText").innerHTML = `${propent.currency} ${(Number(input.value) * propent.unitCost )*porcentaje}`
+})
+l5.addEventListener("click",()=>{
+  porcentaje=0.05
+  pan=7
+  document.getElementById("comissionText").innerHTML = `${propent.currency} ${(Number(input.value) * propent.unitCost )*porcentaje}`
+})
+}); 
 
     });
-
 }
 
 
-let productCost = 0;
-let productCount = 0;
-let comissionPercentage = 0.13;
-let MONEY_SYMBOL = "$";
-let DOLLAR_CURRENCY = "Dólares (USD)";
-let PESO_CURRENCY = "Pesos Uruguayos (UYU)";
-let DOLLAR_SYMBOL = "USD ";
-let PESO_SYMBOL = "UYU ";
-let PERCENTAGE_SYMBOL = '%';
-let MSG = "FUNCIONALIDAD NO IMPLEMENTADA";
-
-//Función que se utiliza para actualizar los costos de publicación
-function updateTotalCosts(){
-    let unitProductCostHTML = document.getElementById("productCostText");
-    let comissionCostHTML = document.getElementById("comissionText");
-    let totalCostHTML = document.getElementById("totalCostText");
-
-    let unitCostToShow = MONEY_SYMBOL + productCost;
-    let comissionToShow = Math.round((comissionPercentage * 100)) + PERCENTAGE_SYMBOL;
-    let totalCostToShow = MONEY_SYMBOL + ((Math.round(productCost * comissionPercentage * 100) / 100) + parseInt(productCost));
-
-    unitProductCostHTML.innerHTML = unitCostToShow;
-    comissionCostHTML.innerHTML = comissionToShow;
-    totalCostHTML.innerHTML = totalCostToShow;
-}
-
-//Función que se ejecuta una vez que se haya lanzado el evento de
-//que el documento se encuentra cargado, es decir, se encuentran todos los
-//elementos HTML presentes.
-document.addEventListener("DOMContentLoaded", function(e){
-    document.getElementById("productCountInput").addEventListener("change", function(){
-        productCount = this.value;
-        updateTotalCosts();
-    });
-
-    document.getElementById("productCostInput").addEventListener("change", function(){
-        productCost = this.value;
-        updateTotalCosts();
-    });
-
-    document.getElementById("goldradio").addEventListener("change", function(){
-        comissionPercentage = 0.13;
-        updateTotalCosts();
-    });
-    
-    document.getElementById("premiumradio").addEventListener("change", function(){
-        comissionPercentage = 0.07;
-        updateTotalCosts();
-    });
-
-    document.getElementById("standardradio").addEventListener("change", function(){
-        comissionPercentage = 0.03;
-        updateTotalCosts();
-    }); 
-
-    document.getElementById("productCurrency").addEventListener("change", function(){
-        if (this.value == DOLLAR_CURRENCY)
-        {
-            MONEY_SYMBOL = DOLLAR_SYMBOL;
-        } 
-        else if (this.value == PESO_CURRENCY)
-        {
-            MONEY_SYMBOL = PESO_SYMBOL;
-        }
-
-        updateTotalCosts();
-    });
-
-
-    //Configuraciones para el elemento que sube archivos
-    let dzoptions = {
-        url:"/",
-        autoQueue: false
-    };
-    let myDropzone = new Dropzone("div#file-upload", dzoptions);    
-
-
-    //Se obtiene el formulario de publicación de producto
-    let sellForm = document.getElementById("sell-info");
-
-    //Se agrega una escucha en el evento 'submit' que será
-    //lanzado por el formulario cuando se seleccione 'Vender'.
-    sellForm.addEventListener("submit", function(e){
-
-        e.preventDefault(); 
-        e.preventDefault();
-
-        let productNameInput = document.getElementById("productName");
-        let productCategory = document.getElementById("productCategory");
-        let productCost = document.getElementById("productCostInput");
-        let infoMissing = false;
-
-        //Quito las clases que marcan como inválidos
-        productNameInput.classList.remove('is-invalid');
-        productCategory.classList.remove('is-invalid');
-        productCost.classList.remove('is-invalid');
-
-        //Se realizan los controles necesarios,
-        //En este caso se controla que se haya ingresado el nombre y categoría.
-        //Consulto por el nombre del producto
-        if (productNameInput.value === "")
-        {
-            productNameInput.classList.add('is-invalid');
-            infoMissing = true;
-        }
-        
-        //Consulto por la categoría del producto
-        if (productCategory.value === "")
-        {
-            productCategory.classList.add('is-invalid');
-            infoMissing = true;
-        }
-
-        //Consulto por el costo
-        if (productCost.value <=0)
-        {
-            productCost.classList.add('is-invalid');
-            infoMissing = true;
-        }
-        
-        if(!infoMissing)
-        {
-            //Aquí ingresa si pasó los controles, irá a enviar
-            //la solicitud para crear la publicación.
-
-            getJSONData(PUBLISH_PRODUCT_URL).then(function(resultObj){
-                let msgToShowHTML = document.getElementById("resultSpan");
-                let msgToShow = "";
-    
-                //Si la publicación fue exitosa, devolverá mensaje de éxito,
-                //de lo contrario, devolverá mensaje de error.
-                //FUNCIONALIDAD NO IMPLEMENTADA
-                if (resultObj.status === 'ok')
-                {
-                    msgToShow = MSG;
-                    document.getElementById("alertResult").classList.add('alert-primary');
-                }
-                else if (resultObj.status === 'error')
-                {
-                    msgToShow = MSG;
-                    document.getElementById("alertResult").classList.add('alert-primary');
-                }
-    
-                msgToShowHTML.innerHTML = msgToShow;
-                document.getElementById("alertResult").classList.add("show");
-            });
-        }
-    });
-});
-
-
+//Reciclo del grupal 6 
 let button = document.getElementById("button");
 let nombre = document.getElementById("nombre");
 let apellido = document.getElementById("apellido");
-let email = document.getElementById("email");
-let pass1 = document.getElementById("password1");
-let pass2 = document.getElementById("password2");
+
+
 let check = document.getElementById("terminos");
 let btncheck = document.getElementById("btnCheck");
-let check2 = document.getElementById("terminos2");
 
 
 function validData(dato) {
@@ -263,16 +134,7 @@ function validCheck() {
     }
 }
 
-function validEmail() {
-    var validEmail = /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
-    if (email.value.length > 0 && validEmail.test(email.value)) {
-        email.classList.add("is-valid")
-    }
-    else {
-        email.classList.add("is-invalid")
-    }
 
-}
 
 function validaDataInput(input) {
     validData(input);
@@ -283,23 +145,10 @@ function validaDataInput(input) {
     });
 }
 
-function validaEmailInput() {
-    validEmail();
-    email.addEventListener("input", () => {
-        email.classList.remove("is-valid")
-        email.classList.remove("is-invalid")
-        validEmail();
-    });
-}
 
-function validaPassInput(passw) {
-    validPassword();
-    passw.addEventListener("input", () => {
-        passw.classList.remove("is-invalid")
-        passw.classList.remove("is-valid")
-        validPassword();
-    });
-}
+
+
+
 
 function validaBtnCheck() {
     validCheck()
@@ -315,15 +164,7 @@ function validaBtnCheck() {
 button.addEventListener("click", () => {
     validaDataInput(nombre);
     validaDataInput(apellido);
-    validaEmailInput();
-    validaPassInput(pass1);
-    validaPassInput(pass2);
+    
     validaBtnCheck();
 
 });
-
-
-
-
-
-

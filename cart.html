@@ -1,273 +1,271 @@
-  <!DOCTYPE html>
-  <html lang="es">
+<!DOCTYPE html>
+<html lang="es">
 
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>eMercado - Todo lo que busques está aquí</title>
-    <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
-  </head>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>eMercado - Todo lo que busques está aquí</title>
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+</head>
 
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-1">
-      <div class="container">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav w-100 justify-content-between">
-            <li class="nav-item">
-              <a class="nav-link" href="login.html">Inicio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="categories.html">Categorías</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="sell.html">Vender</a>
-            </li>
-            <li class="nav-item">
-            </li>
-          </ul>
-        </div>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-1">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav w-100 justify-content-between">
+          <li class="nav-item">
+            <a class="nav-link" href="login.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="categories.html">Categorías</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sell.html">Vender</a>
+          </li>
+          <li class="nav-item" id="pato">
+          </li>
+        </ul>
       </div>
-    </nav>
-    <br> </br>
-
-    <h4> Articulos a comprar</h4>
-    
-    <br> </br>
-    <hr> </hr>
-
-
-  <p id="lasterfest"> </p>
-  <br> </br>
-  
-    <br> </br>
-
-
-    <hr class="mb-4">
-    <h5 class="mb-3">Tipo de publicación</h5>
-    <div class="d-block my-3">
-      <div class="custom-control custom-radio">
-        <input id="goldradio" name="publicationType" type="radio" class="custom-control-input" checked=""
-          required="">
-        <label class="custom-control-label" for="goldradio">Gold (13%)</label>
-      </div>
-      <div class="custom-control custom-radio">
-        <input id="premiumradio" name="publicationType" type="radio" class="custom-control-input" required="">
-        <label class="custom-control-label" for="premiumradio">Premium (7%)</label>
-      </div>
-      <div class="custom-control custom-radio">
-        <input id="standardradio" name="publicationType" type="radio" class="custom-control-input" required="">
-        <label class="custom-control-label" for="standardradio">Estándar (3%)</label>
-      </div>
-      
     </div>
-    <hr class="mb-4">
-    
+  </nav>
+  <br> </br>
+
+  <h4> Articulos a comprar</h4>
+  
+  <br> </br>
+  <hr> </hr>
+  <div id="lasterfest" >
     
     <div class="container">
-      <main>
-        <form action="#" method="get" class="row mt-4">
-          <div class="col">
-            <h1 class="mb-3">Direccion de envio</h1>
-            <hr class="my-4">
-            <div class="row g-3">
-              <div class="col-sm-6">
-                <label for="nombre" class="form-label">Numero</label>
-                <input type="text" class="form-control" id="nombre" required>
-                <div class="invalid-feedback">
-                  Por favor , ingrese Numero
-                </div>
-              </div>
+      <div class="row">
+        <div class="col-sm">
+        
+        </div>
+        <div class="col-sm">
+        <h3 text-center>nombre</h3>
+        </div>
+        <div class="col-sm">
+        <h2 class="mb-1">costo</h2>
+
+        </div>
+        <div class="col-sm">
+        <h3 class="mb-1">cantidad</h3>
+      </div>
+      <div class="col-sm">
+      <h4 class="col-2">total</h4>
+    </div>
+      </div>
+    </div>
+  </div>
+
+
+ <br> </br>
+ <hr> </hr>
+ <hr class="mb-4">
+ <div>
+ <h5 class="mb-3" style="font-size: 2em;">Tipo de envio</h5>
+ <div class="d-block my-3">
+   <div class="custom-control custom-radio">
+     <input id="goldradio" name="publicationType"  type="radio" class="custom-control-input" checked=""  required="">
+     <label class="custom-control-label" for="goldradio">Premium 2 a 5 dias(15%)</label>
+   </div>
+   <div class="custom-control custom-radio">
+     <input id="premiumradio" name="publicationType" type="radio" class="custom-control-input"  required="">
+     <label class="custom-control-label" for="premiumradio">Express 5 a 6 dias (7%) </label>
+   </div>
+   <div class="custom-control custom-radio">
+     <input id="standardradio" name="publicationType" type="radio" class="custom-control-input"  required="">
+     <label class="custom-control-label" for="standardradio">Standard 12 a 15 dias(5%))</label>
+     
+   </div>
+  </div>
+   <h2> Direccion de envio</h2>
+   <br> </br>
+   
   
-              <div class="col-sm-6">
-                <label for="apellido" class="form-label">Calle</label>
-                <input type="text" class="form-control" id="apellido">
-                <div class="invalid-feedback">
-                  Por favor, ingrese  su calle
-                </div>
+   <div class="container">
+    <main>
+      <form action="#" method="get" class="row mt-4">
+        <div class="col">
+          <h1 class="mb-3">Calle</h1>
+          <hr class="my-4">
+          <div class="row g-3">
+            <div class="col-sm-6">
+              <label for="nombre" class="form-label">Calle</label>
+              <input type="text" class="form-control" id="nombre" required>
+              <div class="invalid-feedback">
+                Por favor, ingrese su Calle.
               </div>
-  
-              <div class="col-12">
-                <label for="email" class="form-label">Esquina</label>
-                <input type="email" class="form-control" id="email">
-                <div class="invalid-feedback">
-                 Porfavor ingrese una esquina VALIDA
-                </div>
+            </div>
+
+            <div class="col-sm-6">
+              <label for="apellido" class="form-label">Numero</label>
+              <input type="text" class="form-control" id="apellido">
+              <div class="invalid-feedback">
+               Por favor ingrese un numero
               </div>
-  
-    
+            </div>
+
+            
+
+            
+
+            <div class="col-12">
+              <label for="apellido" class="form-label">Numero</label>
+            <input type="text" class="form-control" >
+          </div>
+        </div>
+
           
+                
+          
+
+        </div>
+      </form>
+
+
+
+
+
+        
+
+<!--Costos los span es donde insertar el js-->
+<hr class="mb-4">
+          <h4 class="mb-3">Costos</h4>
+          <ul class="list-group mb-3">
+            <li class="list-group-item d-flex justify-content-between lh-condensed">
+              <div>
+                <h6 class="my-0">Precio</h6>
+                <small class="text-muted">Unitario del producto</small>
+              </div>
+              <span class="text-muted" id="productCostText">-</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between lh-condensed">
+              <div>
+                <h6 class="my-0">Porcentaje</h6>
+                <small class="text-muted">Según el tipo de publicación</small>
+              </div>
+              <span class="text-muted" id="comissionText">-</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between">
+              <strong >Total ($)</strong>
+              <span id="totalCostText">-</span>
+            </li>
+          </ul>
           
         </form>
-
-      </main>
-
-      
-
-      
-      <div class="modal fade" id="modalTerminos" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5">Metodo de pago</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <p>Seleccione su metodo de pago porfavor</p>
-            </div>
-            
-            <div class="modal-footer">
-              <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="terminos" required>
-                <label class="form-check-label" for="terminos">Deposito bancario.</label>
-               
-
-
-
-                <input type="checkbox" class="form-check-input" id="terminos" required>
-                <label class="form-check-label" for="terminos">Tarjeta</label>
-                <div id="invalidCheckFeedback" class="invalid-feedback">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-  <!--Costos-->
-  <div class="UPE"> 
-  <hr class="mb-4">
-            
-            <h4 class="mb-3">Costos</h4>
-            <ul class="list-group mb-3">
-              <li class="list-group-item d-flex justify-content-between lh-condensed">
-                <div>
-                  <h6 class="my-0">Precio</h6>
-                  <small class="text-muted">Unitario del producto</small>
-                </div>
-                <span class="text-muted" id="productCostText">-</span>
-              </li>
-              <li class="list-group-item d-flex justify-content-between lh-condensed">
-                <div>
-                  <h6 class="my-0">Porcentaje</h6>
-                  <small class="text-muted">Según el tipo de publicación</small>
-                </div>
-                <span class="text-muted" id="comissionText">-</span>
-              </li>
-              <li class="list-group-item d-flex justify-content-between">
-                <span>Total ($)</span>  
-                <strong id="totalCostText">-</strong>
-              </li>
-            </ul>
-            
-          </form>
-        </div>
       </div>
     </div>
-  <div class="UPE2">
-    <h2>Forma de pago </h2>
-    <hr> </hr>
-    <div align="center">
-    <div class="col-sm-12">
-      <div class="row">
-        <button type="button" class="m-1 btn btn-link" data-bs-toggle="modal"
-          data-bs-target="#contidionsModal">Seleccionar</button>
-      </div>
-</div>
-  <hr class="mb-4">
+  </div>
 
-<div class="Movingbutton">
-<button class="btn btn-primary" type="button" id="button">Realizar compra</button>
-</div>
-
-</div> 
-
-</div>
-  <!--Costos-->
-
-  
-
-    </main>
-    <footer class="text-muted">
-      <div class="container">
-        <p class="float-end">
-          <a href="#">Volver arriba</a>
-        </p>
-        <p>Este sitio forma parte de <a href="https://jovenesaprogramar.edu.uy/" target="_blank">Jovenes a Programar</a> -
-          2022</p>
-        <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
-      </div>
-      
-    </footer>
-    <div id="spinner-wrapper">
-      <div class="lds-ring">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+  <h2>Forma de pago </h2>
+  <hr> </hr>
+  <div class="col-sm-12">
+    <div class="d-flex align-items-center">
+      <button
+        type="button"
+        class="btn btn-link ps-0"
+        data-bs-toggle="modal"
+        data-bs-target="#modalTerminos"
+        id="btn"
+      >
+        seleccionar
+      </button>
+      <div id="invalidTerms" class="d-none">
+        no ha selecionado
       </div>
     </div>
+  </div>
 
-
-    <div class="modal fade" tabindex="-1" role="dialog" id="contidionsModal">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">Formas de pago disponibles</h5>
+  <!-- MODAL -->
+  <div
+    class="modal fade"
+    id="modalTerminos"
+    tabindex="-1"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5">
+            Forma de pago
+          </h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">   
+          <input class="form-check-input" type="radio" >   Tarjeta de credito
+        <hr>
+        <div class="row">
+          <div class="col-md-5 p-2">
+            Número de tarjeta 
+              <input type="text" class="form-control" >
           </div>
-          <div class="modal-body">
-            <div class="container">
-
-              <div class="row">
-                <input type="checkbox" class="form-check-input" id="terminos" required>
-                <h5 class="text-warning">Con tarjeta de Credito</h5>
-                <p class="muted text-justify">Toda informacion proporcionada estan sujetas  a varias barras de cogios protejidos por Lucas.</p>
-              </div>
-            </input>
-            <p> CVV</p>
-            <input type="password"> </input>
-            <p>Number</p>
-            <input type="password"> </input>
-            <p>Caduce en </p>
-            <input type="date"> </input>
-
-              <hr>
-              <div class="row">
-                <input type="checkbox" class="form-check-input" id="terminos" required>
-                <h5 class="text-primary">Transferencia Bancaria</h5>
-                <p> Numero de cuenta </p>
-            <input type="password"> </input>
-
-                <p class="muted text-justify">Toda informacion proporcionada estan sujetas  a varias barras de cogios protejidos por Lucas.</p>
-              </div>
-              
-            </div>
+          <div class="col-md-4 p-2 mx-5">
+             Código de seguridad.
+             <input type="text" class="form-control" maxlength="3">
           </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+        <div class="row">
+        <div class="col-md-5 p-2">
+          Vencimiento (MM/AA)
+          <input type="text" class="form-control" >
+        </div>
+        </div>
+          <input class="form-check-input" type="radio" >   Transferencia bancaria
+        <hr>
+        <div class="row">
+          <div class="col-md-5 p-2">
+            Número de cuenta
+            <input type="text" class="form-control"  required="" readonly="">
+          </div>
+          </div>
+        </div>
+      <div class="form-check">
+        <button class="btn btn-primary btn-lg" data-bs-dismiss="modal">Cerrar</button>
+      </div>
           </div>
         </div>
       </div>
     </div>
-    <div id="spinner-wrapper">
-      <div class="lds-ring">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
+  </div>
+
+</div>
+<hr class="mb-4">
+</div>
+<button class="btn btn-primary" type="button" id="button">Comprar ahora?</button>
+</div>
+<!--Costos-->
+
+
+  </main>
+  <footer class="text-muted"  >
+    <div class="container">
+      <p class="float-end">
+        <a href="#">Volver arriba</a>
+      </p>
+      <p>Este sitio forma parte de <a href="https://jovenesaprogramar.edu.uy/" target="_blank">Jovenes a Programar</a> -
+        2022</p>
+      <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
     </div>
+  </footer>
+  <div id="spinner-wrapper">
+    <div class="lds-ring">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/init.js"></script>
+  <script src="js/cart.js" type="module" ></script>
+</body>
 
-    
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/init.js"></script>
-    <script src="js/cart.js" type="module" ></script>
-  </body>
-
-  </html>
+</html>
