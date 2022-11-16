@@ -86,8 +86,9 @@ l5.addEventListener("click",()=>{
 
 //Reciclo del grupal 6 
 let button = document.getElementById("button");
-let nombre = document.getElementById("nombre");
-let apellido = document.getElementById("apellido");
+let Calle = document.getElementById("Calle");
+let Numero = document.getElementById("Numero");
+let Esquina = document.getElementById("Esquina")
 
 
 let check = document.getElementById("terminos");
@@ -162,8 +163,9 @@ function validaBtnCheck() {
 }
 
 button.addEventListener("click", () => {
-    validaDataInput(nombre);
-    validaDataInput(apellido);
+    validaDataInput(Calle);
+    validaDataInput(Numero);
+    validaDataInput(Esquina)
     
     validaBtnCheck();
 

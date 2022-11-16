@@ -98,16 +98,16 @@
           <hr class="my-4">
           <div class="row g-3">
             <div class="col-sm-6">
-              <label for="nombre" class="form-label">Calle</label>
-              <input type="text" class="form-control" id="nombre" required>
+              <label for="Calle" class="form-label">Calle</label>
+              <input type="text" class="form-control" id="Calle" required>
               <div class="invalid-feedback">
                 Por favor, ingrese su Calle.
               </div>
             </div>
 
             <div class="col-sm-6">
-              <label for="apellido" class="form-label">Numero</label>
-              <input type="text" class="form-control" id="apellido">
+              <label for="Numero" class="form-label">Numero</label>
+              <input type="text" class="form-control" id="Numero">
               <div class="invalid-feedback">
                Por favor ingrese un numero
               </div>
@@ -116,12 +116,14 @@
             
 
             
+            <div class="col-sm-6">
+              <label for="Esquina" class="form-label">Esquina</label>
+              <input type="text" class="form-control" id="Esquina">
+              <div class="invalid-feedback">
+               Por favor ingrese una esquina valida
+              </div>
+            </div>
 
-            <div class="col-12">
-              <label for="apellido" class="form-label">Numero</label>
-            <input type="text" class="form-control" >
-          </div>
-        </div>
 
           
                 
@@ -209,13 +211,13 @@
           </div>
           <div class="col-md-4 p-2 mx-5">
              Código de seguridad.
-             <input type="text" class="form-control" maxlength="3">
+             <input type="password" class="form-control" maxlength="3">
           </div>
         </div>
         <div class="row">
         <div class="col-md-5 p-2">
           Vencimiento (MM/AA)
-          <input type="text" class="form-control" >
+          <input type="date" class="form-control" >
         </div>
         </div>
           <input class="form-check-input" type="radio" >   Transferencia bancaria
@@ -223,7 +225,7 @@
         <div class="row">
           <div class="col-md-5 p-2">
             Número de cuenta
-            <input type="text" class="form-control"  required="" readonly="">
+            <input type="text" class="form-control"  >
           </div>
           </div>
         </div>
@@ -236,11 +238,14 @@
     </div>
   </div>
 
+<!--Botton Comprar -->
 </div>
 <hr class="mb-4">
 </div>
 <button class="btn btn-primary" type="button" id="button">Comprar ahora?</button>
 </div>
+
+
 <!--Costos-->
 
 
